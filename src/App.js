@@ -68,7 +68,7 @@ function App() {
               <td>{e.salary}</td>
               <td>{e.bonus}</td>
               <td>{e.status ? "true" : "false"}</td>
-              <td>{i === 0 ? totalExp : null}</td>
+              <td rowspan="5">{i === 0 ? totalExp : null}</td>
             </tr>
           )
         })
