@@ -1,82 +1,55 @@
 import logo from './logo.svg';
 import './App.css';
 
+// function App() {
+//   let arr =[10,20,30,40,50]
+//   let arr1 =[...arr]
+//   let arr2 =[100,200,300,...arr1,400,500]
+//   return (
+//     arr2
+//     .map((a,i) => {
+//       return (
+//         <div key={i}>
+//         <p>{a}</p>
+//         </div>
+//       )
+//     })
+
+//   );
+// }
 function App() {
-  const emp =[
-    {
-      name: "amit",
-      age: 35,
-      salary: 40000,
-      bonus: 1000,
-      status: true
-    },
-    {
-      name: "ajay",
-      age: 25,
-      salary: 38000,
-      bonus: 2000,
-      status: false
-    },
-    {
-      name: "mayur",
-      age: 23,
-      salary: 50000,
-      bonus: 500,
-      status: true
-    },
-    {
-      name: "jay",
-      age: 29,
-      salary: 35000,
-      bonus: 600,
-      status: true
-    },
-    {
-      name: "raj",
-      age: 33,
-      salary: 22000,
-      bonus: 2000,
-      status: true
-    },
-  ]
+  let obj1 = {
+    id : 101 , 
+    name:"RADHIKA"
+  }
 
-  const totalExp = 
-    emp.filter((e,i) => e.status === true)
-    .map((e , i) => e.salary + e.bonus)
-    .reduce((acc , e) => acc + e , 0)
+  let obj2= {...obj1}
 
-  return (
-    <>
-    <table>
-      <tr>
-        <th>sr. no</th>
-        <th>name</th>
-        <th>age</th>
-        <th>salary</th>
-        <th>bonus</th>
-        <th>status</th>
-        <th>totel exp</th>
-      </tr>
-
-      {
-        emp.map((e,i) => {
-          return(
-            <tr>
-              <td>{i+1}</td>
-              <td>{e.name}</td>
-              <td>{e.age}</td>
-              <td>{e.salary}</td>
-              <td>{e.bonus}</td>
-              <td>{e.status ? "true" : "false"}</td>
-              <td rowspan="5">{i === 0 ? totalExp : null}</td>
-            </tr>
-          )
-        })
+  let obj3 = {
+    "salary" : 50000, 
+    ...obj2,
+    "city":"surat"
+  }
+  let obj4 = {
+    "salary" : 50000, 
+    "age" : 25,
+    ...obj2,
+    "city":"surat"
+  }
+    return(
+      <>
+        {
+        <div>
+          <p>{obj3.id}</p>
+          <p>{obj3.name}</p>
+          <p>{obj3.city}</p>
+          <p>{obj3.salary}</p>
+          <p>{obj3.salary}</p>
+        </div>
       }
-    </table>
-    </>
-
-  );
+      </>
+    );
 }
+
 
 export default App;
