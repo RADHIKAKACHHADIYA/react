@@ -44,7 +44,7 @@ function App() {
           <p>{obj3.name}</p>
           <p>{obj3.city}</p>
           <p>{obj3.salary}</p>
-          <p>{obj3.salary}</p>
+          <p>{obj3.sal}</p>
         </div>
       }
       </>
