@@ -5,30 +5,16 @@ class State extends Component {
     constructor (props) {
         super(props); 
         this.state = {
-             myState : 'gujarat'
+             count:0
         }
-        console.log("1 constructor")
     }
-
-    componentDidMount = ()  => {
-        console.log("3 componentDidMount")
-    }
-
-    componentDidUpdate =() => {
-        console.log("4 componentDidUpdate")
-    }
-
-    componentWillUnmount =() => {
-        console.log("5 componentWillUnmount")
-    } 
 
     render() {
-        console.log("render")
         return (
             <div>
-                <Country con="India" /> 
-                <h2>My State is {this.state.myState}.</h2>
-                <button onClick={() => this.setState({myState : 'Rajasthan'})}>change</button>
+                <p>you clicked {this.state.count} times.</p>
+                <button onClick={() => this.setState({ count: this.state.count - 1})}>-</button>
+                <button onClick={() => this.setState({ count: this.state.count + 1})}>+</button>
             </div>
         );
     }
