@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Country(props) {
     const [country ,setCountry] = useState('India');
+
+    useEffect(
+         () => {
+             console.log("componentDidMount")
+         }
+    )
     return (
         <div>
             <h1> My Country is {country}.</h1>
