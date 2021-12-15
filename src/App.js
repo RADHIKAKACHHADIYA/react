@@ -1,11 +1,11 @@
 import './App.css';
-import timeFun from './containes/timeFun';
+import TimerClass from './containes/timerClass';
 function App() {
 
   
     return(
       <>
-        <TimerClass />
+      <TimerClass/>
       </>
     );
 }
