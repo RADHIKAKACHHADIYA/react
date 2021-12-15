@@ -1,14 +1,11 @@
 import './App.css';
-import Country from './containes/Country';
-import State from './containes/State';
-
+import timeFun from './containes/timeFun';
 function App() {
 
   
     return(
       <>
-        <Country />
-        <State />
+        <TimerClass />
       </>
     );
 }

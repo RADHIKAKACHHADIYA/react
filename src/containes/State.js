@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Country from './Country';
 
 class State extends Component {
     constructor (props) {
@@ -11,7 +10,7 @@ class State extends Component {
 
     render() {
         return (
-            <div>
+            <div class="count">
                 <p>you clicked {this.state.count} times.</p>
                 <button onClick={() => this.setState({ count: this.state.count - 1})}>-</button>
                 <button onClick={() => this.setState({ count: this.state.count + 1})}>+</button>

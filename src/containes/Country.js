@@ -5,7 +5,7 @@ function Country(props) {
 
     
     return (
-        <div>
+        <div class="count">
             <h1>counter</h1>
         </div>
     );
