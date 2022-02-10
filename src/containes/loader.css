@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    margin: 20px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top-color: #000;
+    animation:loader 2s infinite linear;
+}
+@keyframes loader {
+    from{
+        transform: translate(0deg);
+    }
+    to{
+        transform: translate(360deg);
+    }
+}
